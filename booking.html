@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Empowering the Nation | Booking</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:#0f172a;
+  color:#f1f5f9;
+}
+
+/* ===== HEADER ===== */
+header{
+  background:#111827;
+  padding:20px;
+  text-align:center;
+  border-bottom:2px solid #1f2937;
+}
+
+header h1{
+  color:#38bdf8;
+  letter-spacing:2px;
+  margin-bottom:10px;
+}
+
+/* ===== NAVIGATION ===== */
+nav ul{
+  list-style:none;
+  display:flex;
+  justify-content:center;
+  gap:25px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#cbd5e1;
+  font-weight:500;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#38bdf8;
+}
+
+/* ===== BOOKING SECTION ===== */
+.booking-section{
+  max-width:600px;
+  margin:60px auto;
+  padding:40px;
+  background:#1e293b;
+  border-radius:15px;
+  box-shadow:0 10px 40px rgba(0,0,0,0.6);
+  animation:fadeIn 1s ease;
+}
+
+.booking-section h2{
+  text-align:center;
+  color:#38bdf8;
+  margin-bottom:10px;
+}
+
+.booking-intro{
+  text-align:center;
+  margin-bottom:30px;
+  color:#94a3b8;
+}
+
+.booking-form{
+  display:flex;
+  flex-direction:column;
+  gap:25px;
+}
+
+.form-group{
+  position:relative;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+  width:100%;
+  padding:12px;
+  background:transparent;
+  border:none;
+  border-bottom:2px solid #334155;
+  outline:none;
+  color:#f1f5f9;
+  font-size:14px;
+}
+
+.form-group label{
+  position:absolute;
+  left:0;
+  top:12px;
+  color:#64748b;
+  pointer-events:none;
+  transition:0.3s;
+}
+
+/* Floating Labels */
+.form-group input:focus ~ label,
+.form-group input:valid ~ label,
+.form-group textarea:focus ~ label,
+.form-group textarea:valid ~ label,
+.form-group select:focus ~ label,
+.form-group select:valid ~ label{
+  top:-15px;
+  font-size:12px;
+  color:#38bdf8;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus{
+  border-bottom:2px solid #38bdf8;
+}
+
+/* Button */
+.book-btn{
+  padding:12px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(45deg,#38bdf8,#6366f1);
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.4s;
+}
+
+.book-btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 10px 20px rgba(56,189,248,0.5);
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:20px;
+  background:#111827;
+  margin-top:60px;
+  border-top:2px solid #1f2937;
+  color:#64748b;
+}
+
+/* Animation */
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* Responsive */
+@media(max-width:768px){
+  nav ul{
+    flex-direction:column;
+    gap:10px;
+  }
+  .booking-section{
+    margin:30px 20px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>EMPOWERING THE NATION</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+     <li><a href="booking.html">Booking</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="booking-section">
+    <h2>Course Booking Form</h2>
+    <p class="booking-intro">
+      Register for one of our Learnerships or Short Courses and start building your future today.
+    </p>
+
+    <form class="booking-form">
+      <div class="form-group">
+        <input type="text" required>
+        <label>Full Name</label>
+      </div>
+
+      <div class="form-group">
+        <input type="email" required>
+        <label>Email Address</label>
+      </div>
+
+      <div class="form-group">
+        <input type="tel" required>
+        <label>Phone Number</label>
+      </div>
+
+      <div class="form-group">
+        <select required>
+          <option value="" disabled selected></option>
+          <option>First Aid</option>
+          <option>Landscaping</option>
+          <option>Life Skills</option>
+          <option>Child Minding</option>
+          <option>Cooking</option>
+          <option>Garden Maintenance</option>
+        </select>
+        <label>Select Course</label>
+      </div>
+
+      <div class="form-group">
+        <textarea rows="4" required></textarea>
+        <label>Additional Notes</label>
+      </div>
+
+      <button type="submit" class="book-btn">Confirm Booking</button>
+    </form>
+  </section>
+</main>
+
+
+
+</body>
+</html>
